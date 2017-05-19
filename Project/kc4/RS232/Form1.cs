@@ -377,13 +377,13 @@ namespace RS232
         private void button2_Click(object sender, EventArgs e)
         {
            
-            String filename = System.DateTime.Now.Day.ToString()+".txt";
+            String filename = System.DateTime.Now.Day.ToString("yyyy年MM月dd日hh_mm_ss") +".txt";
             FileStream fs = new FileStream(@"d:\" + filename, FileMode.OpenOrCreate);    //首先创建一个文件流
             StreamWriter sw = new StreamWriter(fs);    //创建写入器
-            history = "第三十路\r\n"+ history30 + "第二十九路\r\n"+ history29 + "第二十八路\r\n" + history28 + "第二十七路\r\n" + history27 + "第二十六路\r\n" + history26 + "第二十五路\r\n" + history25 + "第二十四路\r\n"
-                + history24 + "第二十三路\r\n" + history23 + "第二十二路\r\n" + history22 + "第二十一路\r\n" + history21 + "第二十路\r\n" + history20 + "第十九路\r\n" + history19 + "第十八路\r\n" + history18 + "第十七路\r\n"
-                + history17 + "第十六路\r\n" + history16 + "第十五路\r\n" + history15 + "第十四路\r\n" + history14 + "第十三路\r\n" + history13 + "第十二路\r\n" + history12 + "第十一路\r\n" + history11 + "第十路\r\n" + history10 
-                + "第九路\r\n" + history9 + "第八路\r\n" + history8 + "第七路\r\n"+ history7 + "第六路\r\n" + history6 + "第五路\r\n" + history5 + "第四路\r\n" + history4 + "第三路\r\n" + history3 + "第二路\r\n" + history2 + "第一路\r\n" + history1;
+            history = "第一路\r\n" + history1 + "第二路\r\n" + history2 + "第三路\r\n" + history3 + "第四路\r\n" + history4 + "第五路\r\n" + history5 + "第六路\r\n" + history6 + "第七路\r\n" + history7 + "第八路\r\n" + history8
+                          + "第九路\r\n" + history9 + "第十路\r\n" + history10 + "第十一路\r\n" + history11 + "第十二路\r\n" + history12 + "第十三路\r\n" + history13 + "第十四路\r\n" + history14 + "第十五路\r\n" + history15 + "第十六路\r\n" + history16
+                          + "第十七路\r\n" + history17 + "第十八路\r\n" + history18 + "第十九路\r\n" + history19 + "第二十路\r\n" + history20 + "第二十一路\r\n" + history21 + "第二十二路\r\n" + history22 + "第二十三路\r\n" + history23
+                           + "第二十四路\r\n" + history24 + "第二十五路\r\n" + history25 + "第二十六路\r\n" + history26 + "第二十七路\r\n" + history27 + "第二十八路\r\n" + history28 + "第二十九路\r\n" + history29 + "第三十路\r\n" + history30;
             sw.WriteLine(history);   //将内容写入文件
             sw.Close();  //关闭写入器
             fs.Close();   //关闭文件流
