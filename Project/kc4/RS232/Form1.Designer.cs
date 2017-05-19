@@ -901,7 +901,7 @@ namespace RS232
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(261, 222);
             this.Name = "fclsRS232Tester";
-            this.Text = "e";
+            this.Text = "河南科技学院";
             this.Load += new System.EventHandler(this.fclsRS232Tester_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

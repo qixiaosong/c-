@@ -16,36 +16,36 @@ namespace RS232
         string InputData = String.Empty;
         char flag = '1';
         String history = "";
-        String history30 = "第三十路\r\n";
-        String history29 = "第二十九路\r\n";
-        String history28 = "第二十八路\r\n"; 
-        String history27 = "第二十七路\r\n";
-        String history26 = "第二十六路\r\n";
-        String history25 = "第二十五路\r\n";
-        String history24 = "第二十四路\r\n";
-        String history23 = "第二十三路\r\n";
-        String history22 = "第二十二路\r\n";
-        String history21 = "第二十一路\r\n";
-        String history20 = "第二十路\r\n";
-        String history19 = "第十九路\r\n";
-        String history18 = "第十八路\r\n";
-        String history17 = "第十七路\r\n";
-        String history16 = "第十六路\r\n";
-        String history15 = "第十五路\r\n";
-        String history14 = "第十四路\r\n";
-        String history13 = "第十三路\r\n";
-        String history12 = "第十二路\r\n";
-        String history11 = "第十一路\r\n";
-        String history10 = "第十路\r\n";
-        String history9 = "第九路\r\n";
-        String history8 = "第八路\r\n";
-        String history7 = "第七路\r\n";
-        String history6 = "第六路\r\n";
-        String history5 = "第五路\r\n";
-        String history4 = "第四路\r\n";
-        String history3 = "第三路\r\n";
-        String history2 = "第二路\r\n";
-        String history1 = "第一路\r\n";
+        String history30 = "\r\n";
+        String history29 = "\r\n";
+        String history28 = "\r\n"; 
+        String history27 = "\r\n";
+        String history26 = "\r\n";
+        String history25 = "\r\n";
+        String history24 = "\r\n";
+        String history23 = "\r\n";
+        String history22 = "\r\n";
+        String history21 = "\r\n";
+        String history20 = "\r\n";
+        String history19 = "\r\n";
+        String history18 = "\r\n";
+        String history17 = "\r\n";
+        String history16 = "\r\n";
+        String history15 = "\r\n";
+        String history14 = "\r\n";
+        String history13 = "\r\n";
+        String history12 = "\r\n";
+        String history11 = "\r\n";
+        String history10 = "\r\n";
+        String history9 = "\r\n";
+        String history8 = "\r\n";
+        String history7 = "\r\n";
+        String history6 = "\r\n";
+        String history5 = "\r\n";
+        String history4 = "\r\n";
+        String history3 = "\r\n";
+        String history2 = "\r\n";
+        String history1 = "\r\n";
         DateTime t1 = System.DateTime.Now;
 
         // This delegate enables asynchronous calls for setting
@@ -377,7 +377,7 @@ namespace RS232
         private void button2_Click(object sender, EventArgs e)
         {
            
-            String filename = System.DateTime.Now.Day.ToString("yyyy年MM月dd日hh_mm_ss") +".txt";
+            String filename = System.DateTime.Now.ToString("yyyy年MM月dd日hh_mm_ss") +".txt";
             FileStream fs = new FileStream(@"d:\" + filename, FileMode.OpenOrCreate);    //首先创建一个文件流
             StreamWriter sw = new StreamWriter(fs);    //创建写入器
             history = "第一路\r\n" + history1 + "第二路\r\n" + history2 + "第三路\r\n" + history3 + "第四路\r\n" + history4 + "第五路\r\n" + history5 + "第六路\r\n" + history6 + "第七路\r\n" + history7 + "第八路\r\n" + history8
