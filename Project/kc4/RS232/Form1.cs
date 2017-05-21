@@ -439,5 +439,15 @@ namespace RS232
         {
 
         }
+
+        private void textBox28_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox21_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

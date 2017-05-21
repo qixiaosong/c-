@@ -114,8 +114,9 @@ namespace RS232
             this.txtIn.Multiline = true;
             this.txtIn.Name = "txtIn";
             this.txtIn.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtIn.Size = new System.Drawing.Size(0, 497);
+            this.txtIn.Size = new System.Drawing.Size(0, 459);
             this.txtIn.TabIndex = 0;
+            this.txtIn.Visible = false;
             this.txtIn.TextChanged += new System.EventHandler(this.txtIn_TextChanged);
             // 
             // statusStrip1
@@ -123,10 +124,10 @@ namespace RS232
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stsStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 795);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 760);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1083, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1047, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -135,6 +136,7 @@ namespace RS232
             this.stsStatus.Name = "stsStatus";
             this.stsStatus.Size = new System.Drawing.Size(137, 20);
             this.stsStatus.Text = "Select serial port!";
+            this.stsStatus.Visible = false;
             // 
             // port
             // 
@@ -165,13 +167,14 @@ namespace RS232
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.Location = new System.Drawing.Point(-113, 576);
+            this.btnClear.Location = new System.Drawing.Point(-149, 538);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 22);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Visible = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label4
@@ -193,6 +196,7 @@ namespace RS232
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.textBox13);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.label23);
@@ -214,7 +218,6 @@ namespace RS232
             this.groupBox1.Controls.Add(this.textBox15);
             this.groupBox1.Controls.Add(this.textBox14);
             this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox13);
             this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.textBox10);
             this.groupBox1.Controls.Add(this.textBox9);
@@ -252,7 +255,7 @@ namespace RS232
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(906, 776);
+            this.groupBox1.Size = new System.Drawing.Size(898, 785);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "history";
@@ -260,7 +263,7 @@ namespace RS232
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(739, 580);
+            this.label32.Location = new System.Drawing.Point(44, 37);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(45, 15);
@@ -270,7 +273,7 @@ namespace RS232
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(604, 580);
+            this.label31.Location = new System.Drawing.Point(192, 36);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(45, 15);
@@ -280,7 +283,7 @@ namespace RS232
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(468, 587);
+            this.label30.Location = new System.Drawing.Point(323, 37);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(45, 15);
@@ -290,7 +293,7 @@ namespace RS232
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(323, 587);
+            this.label29.Location = new System.Drawing.Point(468, 36);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(45, 15);
@@ -300,7 +303,7 @@ namespace RS232
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(192, 587);
+            this.label28.Location = new System.Drawing.Point(604, 37);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(45, 15);
@@ -310,7 +313,7 @@ namespace RS232
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(44, 587);
+            this.label27.Location = new System.Drawing.Point(739, 37);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(45, 15);
@@ -320,7 +323,7 @@ namespace RS232
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(739, 449);
+            this.label26.Location = new System.Drawing.Point(44, 182);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 15);
@@ -330,7 +333,7 @@ namespace RS232
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(604, 449);
+            this.label25.Location = new System.Drawing.Point(192, 182);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(45, 15);
@@ -340,7 +343,7 @@ namespace RS232
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(468, 449);
+            this.label24.Location = new System.Drawing.Point(323, 182);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(45, 15);
@@ -350,7 +353,7 @@ namespace RS232
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(323, 449);
+            this.label23.Location = new System.Drawing.Point(468, 182);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(53, 15);
@@ -360,7 +363,7 @@ namespace RS232
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(192, 449);
+            this.label22.Location = new System.Drawing.Point(604, 182);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(53, 15);
@@ -370,7 +373,7 @@ namespace RS232
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(44, 449);
+            this.label21.Location = new System.Drawing.Point(739, 182);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(53, 15);
@@ -380,7 +383,7 @@ namespace RS232
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(739, 310);
+            this.label20.Location = new System.Drawing.Point(44, 318);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(53, 15);
@@ -390,7 +393,7 @@ namespace RS232
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(604, 310);
+            this.label19.Location = new System.Drawing.Point(192, 318);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(53, 15);
@@ -400,7 +403,7 @@ namespace RS232
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(468, 310);
+            this.label18.Location = new System.Drawing.Point(323, 318);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(53, 15);
@@ -410,7 +413,7 @@ namespace RS232
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(323, 310);
+            this.label17.Location = new System.Drawing.Point(468, 318);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(53, 15);
@@ -420,7 +423,7 @@ namespace RS232
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(192, 310);
+            this.label16.Location = new System.Drawing.Point(604, 318);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 15);
@@ -430,7 +433,7 @@ namespace RS232
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(44, 310);
+            this.label15.Location = new System.Drawing.Point(739, 318);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(53, 15);
@@ -440,7 +443,7 @@ namespace RS232
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(739, 167);
+            this.label14.Location = new System.Drawing.Point(44, 464);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 15);
@@ -450,7 +453,7 @@ namespace RS232
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(604, 167);
+            this.label13.Location = new System.Drawing.Point(184, 464);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 15);
@@ -459,7 +462,7 @@ namespace RS232
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(568, 186);
+            this.textBox20.Location = new System.Drawing.Point(148, 483);
             this.textBox20.Margin = new System.Windows.Forms.Padding(4);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
@@ -469,7 +472,7 @@ namespace RS232
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(708, 186);
+            this.textBox19.Location = new System.Drawing.Point(8, 483);
             this.textBox19.Margin = new System.Windows.Forms.Padding(4);
             this.textBox19.Multiline = true;
             this.textBox19.Name = "textBox19";
@@ -479,7 +482,7 @@ namespace RS232
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(8, 329);
+            this.textBox18.Location = new System.Drawing.Point(708, 337);
             this.textBox18.Margin = new System.Windows.Forms.Padding(4);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
@@ -489,7 +492,7 @@ namespace RS232
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(148, 329);
+            this.textBox17.Location = new System.Drawing.Point(570, 337);
             this.textBox17.Margin = new System.Windows.Forms.Padding(4);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
@@ -499,7 +502,7 @@ namespace RS232
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(288, 329);
+            this.textBox16.Location = new System.Drawing.Point(428, 337);
             this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
@@ -509,7 +512,7 @@ namespace RS232
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(430, 329);
+            this.textBox15.Location = new System.Drawing.Point(288, 337);
             this.textBox15.Margin = new System.Windows.Forms.Padding(4);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
@@ -519,7 +522,7 @@ namespace RS232
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(568, 329);
+            this.textBox14.Location = new System.Drawing.Point(148, 337);
             this.textBox14.Margin = new System.Windows.Forms.Padding(4);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
@@ -529,7 +532,7 @@ namespace RS232
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(8, 468);
+            this.textBox12.Location = new System.Drawing.Point(708, 198);
             this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
@@ -539,7 +542,7 @@ namespace RS232
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(708, 329);
+            this.textBox13.Location = new System.Drawing.Point(8, 337);
             this.textBox13.Margin = new System.Windows.Forms.Padding(4);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
@@ -549,7 +552,7 @@ namespace RS232
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(148, 468);
+            this.textBox11.Location = new System.Drawing.Point(568, 198);
             this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
@@ -559,7 +562,7 @@ namespace RS232
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(288, 468);
+            this.textBox10.Location = new System.Drawing.Point(428, 198);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
@@ -570,7 +573,7 @@ namespace RS232
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(428, 468);
+            this.textBox9.Location = new System.Drawing.Point(288, 198);
             this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
@@ -580,7 +583,7 @@ namespace RS232
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(568, 468);
+            this.textBox8.Location = new System.Drawing.Point(148, 198);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
@@ -590,7 +593,7 @@ namespace RS232
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(708, 468);
+            this.textBox7.Location = new System.Drawing.Point(8, 198);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
@@ -601,7 +604,7 @@ namespace RS232
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(8, 606);
+            this.textBox6.Location = new System.Drawing.Point(710, 55);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
@@ -611,7 +614,7 @@ namespace RS232
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(148, 606);
+            this.textBox5.Location = new System.Drawing.Point(570, 55);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -622,7 +625,7 @@ namespace RS232
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(288, 606);
+            this.textBox4.Location = new System.Drawing.Point(430, 55);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -632,7 +635,7 @@ namespace RS232
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(428, 606);
+            this.textBox3.Location = new System.Drawing.Point(288, 55);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -642,7 +645,7 @@ namespace RS232
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(568, 606);
+            this.textBox2.Location = new System.Drawing.Point(148, 55);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -652,7 +655,7 @@ namespace RS232
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(708, 606);
+            this.textBox1.Location = new System.Drawing.Point(8, 55);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -663,7 +666,7 @@ namespace RS232
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(468, 167);
+            this.label12.Location = new System.Drawing.Point(323, 464);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 15);
@@ -673,7 +676,7 @@ namespace RS232
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(323, 167);
+            this.label11.Location = new System.Drawing.Point(468, 464);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 15);
@@ -683,7 +686,7 @@ namespace RS232
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(192, 167);
+            this.label10.Location = new System.Drawing.Point(604, 464);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 15);
@@ -694,7 +697,7 @@ namespace RS232
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(44, 167);
+            this.label9.Location = new System.Drawing.Point(739, 464);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 15);
@@ -704,7 +707,7 @@ namespace RS232
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(739, 20);
+            this.label7.Location = new System.Drawing.Point(44, 603);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 15);
@@ -713,17 +716,18 @@ namespace RS232
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(428, 186);
+            this.textBox21.Location = new System.Drawing.Point(288, 483);
             this.textBox21.Margin = new System.Windows.Forms.Padding(4);
             this.textBox21.Multiline = true;
             this.textBox21.Name = "textBox21";
             this.textBox21.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox21.Size = new System.Drawing.Size(132, 108);
             this.textBox21.TabIndex = 33;
+            this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(288, 186);
+            this.textBox22.Location = new System.Drawing.Point(428, 483);
             this.textBox22.Margin = new System.Windows.Forms.Padding(4);
             this.textBox22.Multiline = true;
             this.textBox22.Name = "textBox22";
@@ -733,7 +737,7 @@ namespace RS232
             // 
             // textBox23
             // 
-            this.textBox23.Location = new System.Drawing.Point(148, 186);
+            this.textBox23.Location = new System.Drawing.Point(568, 483);
             this.textBox23.Margin = new System.Windows.Forms.Padding(4);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
@@ -743,7 +747,7 @@ namespace RS232
             // 
             // textBox24
             // 
-            this.textBox24.Location = new System.Drawing.Point(8, 186);
+            this.textBox24.Location = new System.Drawing.Point(708, 483);
             this.textBox24.Margin = new System.Windows.Forms.Padding(4);
             this.textBox24.Multiline = true;
             this.textBox24.Name = "textBox24";
@@ -753,7 +757,7 @@ namespace RS232
             // 
             // textBox25
             // 
-            this.textBox25.Location = new System.Drawing.Point(708, 41);
+            this.textBox25.Location = new System.Drawing.Point(8, 622);
             this.textBox25.Margin = new System.Windows.Forms.Padding(4);
             this.textBox25.Multiline = true;
             this.textBox25.Name = "textBox25";
@@ -764,7 +768,7 @@ namespace RS232
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(604, 20);
+            this.label5.Location = new System.Drawing.Point(184, 603);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 15);
@@ -774,7 +778,7 @@ namespace RS232
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(468, 22);
+            this.label2.Location = new System.Drawing.Point(323, 604);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 15);
@@ -784,7 +788,7 @@ namespace RS232
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(323, 20);
+            this.label1.Location = new System.Drawing.Point(468, 604);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 15);
@@ -793,7 +797,7 @@ namespace RS232
             // 
             // textBox26
             // 
-            this.textBox26.Location = new System.Drawing.Point(568, 41);
+            this.textBox26.Location = new System.Drawing.Point(148, 622);
             this.textBox26.Margin = new System.Windows.Forms.Padding(4);
             this.textBox26.Multiline = true;
             this.textBox26.Name = "textBox26";
@@ -803,7 +807,7 @@ namespace RS232
             // 
             // textBox27
             // 
-            this.textBox27.Location = new System.Drawing.Point(428, 39);
+            this.textBox27.Location = new System.Drawing.Point(288, 623);
             this.textBox27.Margin = new System.Windows.Forms.Padding(4);
             this.textBox27.Multiline = true;
             this.textBox27.Name = "textBox27";
@@ -813,18 +817,19 @@ namespace RS232
             // 
             // textBox28
             // 
-            this.textBox28.Location = new System.Drawing.Point(288, 39);
+            this.textBox28.Location = new System.Drawing.Point(428, 622);
             this.textBox28.Margin = new System.Windows.Forms.Padding(4);
             this.textBox28.Multiline = true;
             this.textBox28.Name = "textBox28";
             this.textBox28.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox28.Size = new System.Drawing.Size(132, 108);
             this.textBox28.TabIndex = 23;
+            this.textBox28.TextChanged += new System.EventHandler(this.textBox28_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(192, 22);
+            this.label8.Location = new System.Drawing.Point(604, 604);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 15);
             this.label8.TabIndex = 22;
@@ -833,7 +838,7 @@ namespace RS232
             // 
             // textBox29
             // 
-            this.textBox29.Location = new System.Drawing.Point(148, 41);
+            this.textBox29.Location = new System.Drawing.Point(568, 623);
             this.textBox29.Margin = new System.Windows.Forms.Padding(4);
             this.textBox29.Multiline = true;
             this.textBox29.Name = "textBox29";
@@ -866,7 +871,7 @@ namespace RS232
             // 
             // textBox30
             // 
-            this.textBox30.Location = new System.Drawing.Point(8, 41);
+            this.textBox30.Location = new System.Drawing.Point(708, 623);
             this.textBox30.Margin = new System.Windows.Forms.Padding(4);
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
@@ -878,7 +883,7 @@ namespace RS232
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 22);
+            this.label6.Location = new System.Drawing.Point(739, 604);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 15);
@@ -890,7 +895,7 @@ namespace RS232
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1083, 820);
+            this.ClientSize = new System.Drawing.Size(1047, 782);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
