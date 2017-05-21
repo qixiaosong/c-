@@ -14,7 +14,7 @@ namespace RS232
     public partial class fclsRS232Tester : Form
     {
         string InputData = String.Empty;
-        char flag = '1';
+//        char flag = '1';
         String history = "";
         String history30 = "\r\n";
         String history29 = "\r\n";
