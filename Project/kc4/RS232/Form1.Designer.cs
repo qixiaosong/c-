@@ -45,6 +45,7 @@ namespace RS232
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@ namespace RS232
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -114,9 +114,8 @@ namespace RS232
             this.txtIn.Multiline = true;
             this.txtIn.Name = "txtIn";
             this.txtIn.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtIn.Size = new System.Drawing.Size(0, 459);
+            this.txtIn.Size = new System.Drawing.Size(169, 459);
             this.txtIn.TabIndex = 0;
-            this.txtIn.Visible = false;
             this.txtIn.TextChanged += new System.EventHandler(this.txtIn_TextChanged);
             // 
             // statusStrip1
@@ -127,7 +126,7 @@ namespace RS232
             this.statusStrip1.Location = new System.Drawing.Point(0, 760);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1047, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1216, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -167,14 +166,13 @@ namespace RS232
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.Location = new System.Drawing.Point(-149, 538);
+            this.btnClear.Location = new System.Drawing.Point(20, 538);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 22);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Visible = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label4
@@ -329,6 +327,16 @@ namespace RS232
             this.label26.Size = new System.Drawing.Size(45, 15);
             this.label26.TabIndex = 72;
             this.label26.Text = "µÚ7Â·";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(8, 337);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox13.Multiline = true;
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox13.Size = new System.Drawing.Size(132, 108);
+            this.textBox13.TabIndex = 51;
             // 
             // label25
             // 
@@ -539,16 +547,6 @@ namespace RS232
             this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox12.Size = new System.Drawing.Size(132, 108);
             this.textBox12.TabIndex = 50;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(8, 337);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox13.Size = new System.Drawing.Size(132, 108);
-            this.textBox13.TabIndex = 51;
             // 
             // textBox11
             // 
@@ -895,7 +893,7 @@ namespace RS232
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1047, 782);
+            this.ClientSize = new System.Drawing.Size(1216, 782);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
