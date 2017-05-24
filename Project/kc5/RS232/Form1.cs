@@ -14,7 +14,6 @@ namespace RS232
     public partial class fclsRS232Tester : Form
     {
         byte[] InputData = new byte[4];
-//        char flag = '1';
         String history = "";
         String history30 = "\r\n";
         String history29 = "\r\n";
@@ -47,9 +46,6 @@ namespace RS232
         String history2 = "\r\n";
         String history1 = "\r\n";
         DateTime t1 = System.DateTime.Now;
-
-        // This delegate enables asynchronous calls for setting
-        // the text property on a TextBox control:
         delegate void SetTextCallback(string text);
  
         public fclsRS232Tester()
@@ -290,236 +286,16 @@ namespace RS232
 
         }
 
-        // This method demonstrates a pattern for making thread-safe
-        // calls on a Windows Forms control. 
-        //
-        // If the calling thread is different from the thread that
-        // created the TextBox control, this method creates a
-        // SetTextCallback and calls itself asynchronously using the
-        // Invoke method.
-        //
-        // If the calling thread is the same as the thread that created
-        // the TextBox control, the Text property is set directly. 
-
-        //private void SetText(string text)
-        //{
-        //    // InvokeRequired required compares the thread ID of the
-        //    // calling thread to the thread ID of the creating thread.
-        //    // If these threads are different, it returns true.
-        //    if (this.txtIn.InvokeRequired)
-        //    {
-        //        SetTextCallback d = new SetTextCallback(SetText);
-        //        this.Invoke(d, new object[] { text });
-        //    }
-        //    else
-        //    {
-        //        this.txtIn.Text += text;
-
-        //        DateTime t2 = System.DateTime.Now;
-        //        TimeSpan ts = t1.Subtract(t2).Duration();
-
-        //            //if (InputData.IndexOf("30") == 0)
-        //            //{
-        //            ////textBox30.Text = textBox30.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox30.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history30 = textBox30.Text + "\r\n"; 
-        //            //}
-        //            //else if (InputData.IndexOf("29") == 0)
-        //            //{
-        //            ////textBox29.Text = textBox29.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox29.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history29 = textBox29.Text + "\r\n"; 
-        //            //}
-        //            //else if (InputData.IndexOf("28") == 0)
-        //            //{
-        //            ////textBox28.Text = textBox28.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox28.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history28 = textBox28.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("27") == 0)
-        //            //{
-        //            ////textBox27.Text = textBox27.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox27.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history27 = textBox27.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("26") == 0)
-        //            //{
-        //            ////textBox26.Text = textBox26.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox26.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history26 = textBox26.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("25") == 0)
-        //            //{
-        //            ////textBox25.Text = textBox25.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox25.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history25 = textBox25.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("24") == 0)
-        //            //{
-        //            ////textBox24.Text = textBox24.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox24.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history24 = textBox24.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("23") == 0)
-        //            //{
-        //            ////textBox23.Text = textBox23.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox23.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history23 = textBox23.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("22") == 0)
-        //            //{
-        //            ////textBox22.Text = textBox22.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox22.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history22 = textBox22.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("21") == 0)
-        //            //{
-        //            ////textBox21.Text = textBox21.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox21.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history21 = textBox21.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("20") == 0)
-        //            //{
-        //            ////textBox20.Text = textBox20.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox20.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history20 = textBox20.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("19") == 0)
-        //            //{
-        //            ////textBox19.Text = textBox19.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox19.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history19 = textBox19.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("18") == 0)
-        //            //{
-        //            ////textBox18.Text = textBox18.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox18.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history18 = textBox18.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("17") == 0)
-        //            //{
-        //            ////textBox17.Text = textBox17.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox17.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history17 = textBox17.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("16") == 0)
-        //            //{
-        //            //// textBox16.Text = textBox16.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox16.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history16 = textBox16.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("15") == 0)
-        //            //{
-        //            //// textBox15.Text = textBox15.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox15.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history15 = textBox15.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("14") == 0)
-        //            //{
-        //            ////textBox14.Text = textBox14.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox14.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history14 = textBox14.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("13") == 0)
-        //            //{
-        //            ////textBox13.Text = textBox13.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox13.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history13 = textBox13.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("12") == 0)
-        //            //{
-        //            ////textBox12.Text = textBox12.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox12.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history12 = textBox12.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("11") == 0)
-        //            //{
-        //            ////textBox11.Text = textBox11.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox11.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history11 = textBox11.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("10") == 0)
-        //            //{
-        //            ////textBox10.Text = textBox10.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox10.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history10 = textBox10.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("09") == 0)
-        //            //{
-        //            //// textBox9.Text = textBox9.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox9.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history9 = textBox9.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("08") == 0)
-        //            //{
-        //            ////textBox8.Text = textBox8.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox9.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history8 = textBox8.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("07") == 0)
-        //            //{
-        //            ////textBox7.Text = textBox7.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox7.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history7 = textBox7.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("06") == 0)
-        //            //{
-        //            //// textBox6.Text = textBox6.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox6.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history6 = textBox6.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("05") == 0)
-        //            //{
-        //            //// textBox5.Text = textBox5.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox5.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history5 = textBox5.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("04") == 0)
-        //            //{
-        //            //// textBox4.Text = textBox4.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox4.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history4 = textBox4.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("03") == 0)
-        //            //{
-        //            //// textBox3.Text = textBox3.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox3.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history3 = textBox3.Text + "\r\n";
-        //            //}
-        //            //else if (InputData.IndexOf("02") == 0)
-        //            //{
-        //            ////textBox2.Text = textBox2.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            //textBox2.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            //history2 = textBox2.Text + "\r\n";
-        //            //}
-        //            if (InputData.IndexOf("01") == 0)
-        //            {
-
-        //            //textBox1.Text = textBox1.Text + ts.TotalSeconds.ToString() + "\r\n";
-        //            textBox1.AppendText(ts.TotalSeconds.ToString() + "\r\n");
-        //            history1 = textBox1.Text + "\r\n";
-        //            }
-
-        //        //else
-        //        //{
-        //        //    //textBox1.Text = "000";
-        //        //    textBox1.AppendText("000" + "\r\n");
-        //        //}
-
-        //    }
-
-
-        //}
 
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
-        string time1;
+
         private void fclsRS232Tester_Load(object sender, EventArgs e)
         {
-            this.MaximumSize = this.Size;
-            this.MinimumSize = this.Size;
+            //this.MaximumSize = this.Size;
+            //this.MinimumSize = this.Size;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -599,10 +375,6 @@ namespace RS232
 
         }
 
-        //private void textBox4_TextChanged(object sender, EventArgs e)
-        //{
-
-        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
