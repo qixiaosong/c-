@@ -347,7 +347,7 @@ namespace RS232
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String filename = System.DateTime.Now.ToString("yyyy年MM月dd日hh_mm_ss") +".txt";
+            String filename = System.DateTime.Now.ToString("yyyy年MM月dd日HH_mm_ss") +".txt";
             FileStream fs = new FileStream(@"d:\" + filename, FileMode.OpenOrCreate);    //首先创建一个文件流
             StreamWriter sw = new StreamWriter(fs);    //创建写入器
             history = "第一路\r\n" + history1 + "第二路\r\n" + history2 + "第三路\r\n" + history3 + "第四路\r\n" + history4 + "第五路\r\n" + history5 + "第六路\r\n" + history6 + "第七路\r\n" + history7 + "第八路\r\n" + history8
