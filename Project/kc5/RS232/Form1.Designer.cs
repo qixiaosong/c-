@@ -135,6 +135,7 @@ namespace RS232
             this.cmbComSelect.Size = new System.Drawing.Size(100, 23);
             this.cmbComSelect.Sorted = true;
             this.cmbComSelect.TabIndex = 9;
+            this.cmbComSelect.SelectedIndexChanged += new System.EventHandler(this.cmbComSelect_SelectedIndexChanged);
             this.cmbComSelect.SelectionChangeCommitted += new System.EventHandler(this.cmbComSelect_SelectionChangeCommitted);
             // 
             // label3
@@ -283,7 +284,7 @@ namespace RS232
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(44, 182);
+            this.label26.Location = new System.Drawing.Point(71, 182);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 15);
@@ -353,7 +354,7 @@ namespace RS232
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(44, 318);
+            this.label20.Location = new System.Drawing.Point(63, 318);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(53, 15);
@@ -413,7 +414,7 @@ namespace RS232
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(44, 464);
+            this.label14.Location = new System.Drawing.Point(63, 464);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 15);
@@ -622,6 +623,7 @@ namespace RS232
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(162, 108);
             this.textBox1.TabIndex = 39;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label12
             // 
@@ -667,7 +669,7 @@ namespace RS232
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 603);
+            this.label7.Location = new System.Drawing.Point(63, 604);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 15);

@@ -9,6 +9,8 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InsectTachometer", "InsectT
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InsectTachometerV2.0", "InsectTachometerV2.0\InsectTachometerV2.0.vdproj", "{F8468818-CB59-4A85-B5A0-4F36E30DDAD3}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Insect", "Insect\Insect.vdproj", "{AB49E47D-2BC2-4FC0-826E-16FB62547AF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,8 @@ Global
 		{82C6E7CC-4FB5-47AE-9BB4-CD05EF207712}.Release|Any CPU.ActiveCfg = Release
 		{F8468818-CB59-4A85-B5A0-4F36E30DDAD3}.Debug|Any CPU.ActiveCfg = Debug
 		{F8468818-CB59-4A85-B5A0-4F36E30DDAD3}.Release|Any CPU.ActiveCfg = Release
+		{AB49E47D-2BC2-4FC0-826E-16FB62547AF8}.Debug|Any CPU.ActiveCfg = Debug
+		{AB49E47D-2BC2-4FC0-826E-16FB62547AF8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
