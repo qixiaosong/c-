@@ -66,7 +66,7 @@ namespace RS232
         {
             if (port.IsOpen) port.Close();
             port.PortName = cmbComSelect.SelectedItem.ToString();
-            port.BaudRate = 38400;
+            port.BaudRate = 115200;
             stsStatus.Text = port.PortName + ":9600,8N1";
 
             // try to open the selected port:

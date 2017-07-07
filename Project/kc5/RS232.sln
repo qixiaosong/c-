@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS232", "RS232\RS232.csproj", "{1BAAB9D4-EBFE-4648-870C-BE17FE90EB9F}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InsectTachometer", "InsectTachometer\InsectTachometer.vdproj", "{82C6E7CC-4FB5-47AE-9BB4-CD05EF207712}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InsectTachometerV2.0", "InsectTachometerV2.0\InsectTachometerV2.0.vdproj", "{F8468818-CB59-4A85-B5A0-4F36E30DDAD3}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Insect", "Insect\Insect.vdproj", "{AB49E47D-2BC2-4FC0-826E-16FB62547AF8}"
 EndProject
 Global
@@ -21,10 +17,6 @@ Global
 		{1BAAB9D4-EBFE-4648-870C-BE17FE90EB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BAAB9D4-EBFE-4648-870C-BE17FE90EB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BAAB9D4-EBFE-4648-870C-BE17FE90EB9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82C6E7CC-4FB5-47AE-9BB4-CD05EF207712}.Debug|Any CPU.ActiveCfg = Debug
-		{82C6E7CC-4FB5-47AE-9BB4-CD05EF207712}.Release|Any CPU.ActiveCfg = Release
-		{F8468818-CB59-4A85-B5A0-4F36E30DDAD3}.Debug|Any CPU.ActiveCfg = Debug
-		{F8468818-CB59-4A85-B5A0-4F36E30DDAD3}.Release|Any CPU.ActiveCfg = Release
 		{AB49E47D-2BC2-4FC0-826E-16FB62547AF8}.Debug|Any CPU.ActiveCfg = Debug
 		{AB49E47D-2BC2-4FC0-826E-16FB62547AF8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
