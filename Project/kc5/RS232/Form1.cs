@@ -82,7 +82,11 @@ namespace RS232
                 stsStatus.Text = "Select serial port!";
             }
         }
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex >= 0)
+                port.BaudRate = Convert.ToInt32(comboBox1.SelectedItem.ToString());
+        }
         //private void btnSend_Click(object sender, EventArgs e)
         //{
         //    //if (port.IsOpen) port.WriteLine(txtOut.Text);
@@ -426,5 +430,9 @@ namespace RS232
         {
 
         }
+
+
+
+
     }
 }

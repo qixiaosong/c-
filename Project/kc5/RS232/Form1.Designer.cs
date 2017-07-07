@@ -98,6 +98,8 @@ namespace RS232
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -129,7 +131,7 @@ namespace RS232
             // cmbComSelect
             // 
             this.cmbComSelect.FormattingEnabled = true;
-            this.cmbComSelect.Location = new System.Drawing.Point(13, 25);
+            this.cmbComSelect.Location = new System.Drawing.Point(12, 28);
             this.cmbComSelect.Margin = new System.Windows.Forms.Padding(4);
             this.cmbComSelect.Name = "cmbComSelect";
             this.cmbComSelect.Size = new System.Drawing.Size(100, 23);
@@ -141,12 +143,12 @@ namespace RS232
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 6);
+            this.label3.Location = new System.Drawing.Point(9, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 15);
+            this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Select COM:";
+            this.label3.Text = "串口号：";
             // 
             // groupBox1
             // 
@@ -216,10 +218,11 @@ namespace RS232
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox1.Size = new System.Drawing.Size(1022, 785);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "history";
+            this.groupBox1.Text = "数据记录";
             // 
             // label32
             // 
@@ -852,12 +855,40 @@ namespace RS232
             this.label6.TabIndex = 0;
             this.label6.Text = "第30路";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "9600",
+            "14400",
+            "19200",
+            "28800",
+            "38400",
+            "57600",
+            "115200"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 96);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 23);
+            this.comboBox1.TabIndex = 21;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "波特率：";
+            // 
             // fclsRS232Tester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1216, 801);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbComSelect);
@@ -947,6 +978,8 @@ namespace RS232
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
