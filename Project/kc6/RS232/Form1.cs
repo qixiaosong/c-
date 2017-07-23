@@ -55,13 +55,9 @@ namespace RS232
  
         public fclsRS232Tester()
         {
-            InitializeComponent();
-
-            // Nice methods to browse all available ports:
-            string[] ports = SerialPort.GetPortNames();
-
-            // Add all port names to the combo box:
-            foreach (string port in ports)
+            InitializeComponent();          
+            string[] ports = SerialPort.GetPortNames(); // Nice methods to browse all available ports:
+            foreach (string port in ports)            // Add all port names to the combo box:
             {
                 cmbComSelect.Items.Add(port);
             }
@@ -73,13 +69,10 @@ namespace RS232
             port.PortName = cmbComSelect.SelectedItem.ToString();
             port.BaudRate = 115200;
             stsStatus.Text = port.PortName + ":9600,8N1";
-
-            // try to open the selected port:
             try
             {
                 port.Open();
-            }
-            // give a message, if the port is not available:
+            }        
             catch
             {
                 MessageBox.Show("Serial port " + port.PortName + " cannot be opened!", "RS232 tester", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -93,27 +86,14 @@ namespace RS232
             if (comboBox1.SelectedIndex >= 0)
                 port.BaudRate = Convert.ToInt32(comboBox1.SelectedItem.ToString());
         }
-        //private void btnSend_Click(object sender, EventArgs e)
-        //{
-        //    //if (port.IsOpen) port.WriteLine(txtOut.Text);
-        //    //else MessageBox.Show("Serial port is closed!", "RS232 tester", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    //txtOut.Clear();
-        //}
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            //txtIn.Clear();
+           
         }
-        //byte[] num = new byte[1];
-        //DateTime t2;
-        //TimeSpan ts;
-        
- //       public TIME times=new TIME();
+
         private void port_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
         {
-            //t2 = System.DateTime.Now;
-            //ts = t1.Subtract(t2).Duration();
-
             InputData[0] = Convert.ToByte(port.ReadByte());
             InputData[1] = Convert.ToByte(port.ReadByte());
             InputData[2] = Convert.ToByte(port.ReadByte());
@@ -128,247 +108,211 @@ namespace RS232
             InputData[11] = Convert.ToByte(port.ReadByte());
             InputData[12] = Convert.ToByte(port.ReadByte());
             InputData[13] = Convert.ToByte(port.ReadByte());
-
-            //if (InputData[1] == 49)
-            //{
-            //    num[0] = 01;
-                
-            //}
-            //if (InputData[1] == 50)
-            //{
-            //    num[0] = 02;
-            //}
-            //if (InputData[1] == 51)
-            //{
-            //    num[0] = 03;
-            //}
-
             ShowMessage(InputData);
         }
-        //public static void ByteArrayToStructure(byte[] bytearray, ref object obj, int startoffset)
-        //{
-        //    int len = Marshal.SizeOf(obj);
-        //    IntPtr i = Marshal.AllocHGlobal(len);
-        //    // 从结构体指针构造结构体
-        //    obj = Marshal.PtrToStructure(i, obj.GetType());
-        //    try
-        //    {
-        //        // 将字节数组复制到结构体指针
-        //        Marshal.Copy(bytearray, startoffset, i, len);
-        //    }
-        //    catch (Exception ex) { Console.WriteLine("ByteArrayToStructure FAIL: error " + ex.ToString()); }
-        //    obj = Marshal.PtrToStructure(i, obj.GetType());
-        //    Marshal.FreeHGlobal(i);  //释放内存，与 AllocHGlobal() 对应
-
-        //}
 
         public USARTDATA usartdata = new USARTDATA();
         delegate void ShowMessCallback(byte[] message);
         void ShowMessage(byte[] message)
         {
-            //            ByteArrayToStructure(InputData, ref usartdata,0);
-                        
-                        Converter Convert = new Converter();
+
+            Converter Convert = new Converter();
             USARTDATA usartdata1 = (USARTDATA)Convert.BytesToStruct(message, usartdata.GetType());
-                        ulong times = ((ulong)usartdata1.timecounterh)<<32| (ulong)usartdata1.timecounterl;
-                        byte id = usartdata1.id;
-                        double us = times / 100000.0;
-                        if (this.InvokeRequired) this.Invoke(new ShowMessCallback(ShowMessage), new Object[] { message });
-                        else
-                        {
-
-
-                            //txtIn.Text = txtIn.Text + " " + message[0];
-                            switch (id)
+            ulong times = ((ulong)usartdata1.timecounterh)<<32| (ulong)usartdata1.timecounterl;
+            byte id = usartdata1.id;
+            double us = times / 100000.0;
+            if (this.InvokeRequired) this.Invoke(new ShowMessCallback(ShowMessage), new Object[] { message });
+                else
+                {
+                    switch (id)
+                    {
+                        case 1:
                             {
-                                case 1:
-                                    {
-                                        textBox1.Text = textBox1.Text.Insert(0, us.ToString() + "\r\n");
-                                        history1 = textBox1.Text + "\r\n";
-                                        break;
-                                    }
-
-                                case 2:
-                                    {
-                                        textBox2.Text = textBox2.Text.Insert(0, us.ToString() + "\r\n");
-                                        history2 = textBox2.Text + "\r\n";
-                                        break;
-                                    }
-                                case 3:
-                                    {
-                                        textBox3.Text = textBox3.Text.Insert(0, us.ToString() + "\r\n");
-                                        history3 = textBox3.Text + "\r\n";
-                                        break;
-                                    }
-                                case 4 :
-                                    {
-                                        textBox4.Text = textBox4.Text.Insert(0, us.ToString() + "\r\n");
-                                        history4 = textBox4.Text + "\r\n";
-                                        break;
-                                    }
-                                case 5 :
-                                    {
-                                        textBox5.Text = textBox5.Text.Insert(0, us.ToString() + "\r\n");
-                                        history5 = textBox5.Text + "\r\n";
-                                        break;
-                                    }
-                                case 6 :
-                                    {
-                                        textBox6.Text = textBox6.Text.Insert(0, us.ToString() + "\r\n");
-                                        history6 = textBox6.Text + "\r\n";
-                                        break;
-                                    }
-                                case 7 :
-                                    {
-                                        textBox7.Text = textBox7.Text.Insert(0, us.ToString() + "\r\n");
-                                        history7 = textBox7.Text + "\r\n";
-                                        break;
-                                    }
-                                case 8 :
-                                    {
-                                        textBox8.Text = textBox8.Text.Insert(0, us.ToString() + "\r\n");
-                                        history8 = textBox8.Text + "\r\n";
-                                        break;
-                                    }
-                                case 9 :
-                                    {
-                                        textBox9.Text = textBox9.Text.Insert(0, us.ToString() + "\r\n");
-                                        history9 = textBox9.Text + "\r\n";
-                                        break;
-                                    }
-                                case 10 :
-                                    {
-                                        textBox10.Text = textBox10.Text.Insert(0, us.ToString() + "\r\n");
-                                        history10 = textBox10.Text + "\r\n";
-                                        break;
-                                    }
-                                //11-20
-                                case 11 :
-                                    {
-                                        textBox11.Text = textBox11.Text.Insert(0, us.ToString() + "\r\n");
-                                        history11 = textBox11.Text + "\r\n";
-                                        break;
-                                    }
-                                case 12 :
-                                    {
-                                        textBox12.Text = textBox12.Text.Insert(0, us.ToString() + "\r\n");
-                                        history12 = textBox12.Text + "\r\n";
-                                        break;
-                                    }
-                                case 13 :
-                                    {
-                                        textBox13.Text = textBox13.Text.Insert(0, us.ToString() + "\r\n");
-                                        history13 = textBox13.Text + "\r\n";
-                                        break;
-                                    }
-                                case  14:
-                                    {
-                                        textBox14.Text = textBox14.Text.Insert(0, us.ToString() + "\r\n");
-                                        history14 = textBox14.Text + "\r\n";
-                                        break;
-                                    }
-                                case 15 :
-                                    {
-                                        textBox15.Text = textBox15.Text.Insert(0, us.ToString() + "\r\n");
-                                        history15 = textBox15.Text + "\r\n";
-                                        break;
-                                    }
-                                case 16 :
-                                    {
-                                        textBox16.Text = textBox16.Text.Insert(0, us.ToString() + "\r\n");
-                                        history16 = textBox16.Text + "\r\n";
-                                        break;
-                                    }
-                                case 17 :
-                                    {
-                                        textBox17.Text = textBox17.Text.Insert(0, us.ToString() + "\r\n");
-                                        history17 = textBox17.Text + "\r\n";
-                                        break;
-                                    }
-                                case 18:
-                                    {
-                                        textBox18.Text = textBox18.Text.Insert(0, us.ToString() + "\r\n");
-                                        history18 = textBox18.Text + "\r\n";
-                                        break;
-                                    }
-                                case 19 :
-                                    {
-                                        textBox19.Text = textBox19.Text.Insert(0, us.ToString() + "\r\n");
-                                        history19 = textBox19.Text + "\r\n";
-                                        break;
-                                    }
-                                case 20 :
-                                    {
-                                        textBox20.Text = textBox20.Text.Insert(0, us.ToString() + "\r\n");
-                                        history20 = textBox20.Text + "\r\n";
-                                        break;
-                                    }
-                                //20-30
-                                case 21 :
-                                    {
-                                        textBox21.Text = textBox21.Text.Insert(0, us.ToString() + "\r\n");
-                                        history21 = textBox21.Text + "\r\n";
-                                        break;
-                                    }
-                                case 22:
-                                    {
-                                        textBox22.Text = textBox22.Text.Insert(0, us.ToString() + "\r\n");
-                                        history22 = textBox22.Text + "\r\n";
-                                        break;
-                                    }
-                                case 23 :
-                                    {
-                                        textBox23.Text = textBox23.Text.Insert(0, us.ToString() + "\r\n");
-                                        history23 = textBox23.Text + "\r\n";
-                                        break;
-                                    }
-                                case 24 :
-                                    {
-                                        textBox24.Text = textBox24.Text.Insert(0, us.ToString() + "\r\n");
-                                        history24 = textBox24.Text + "\r\n";
-                                        break;
-                                    }
-                                case 25 :
-                                    {
-                                        textBox25.Text = textBox25.Text.Insert(0, us.ToString() + "\r\n");
-                                        history25 = textBox25.Text + "\r\n";
-                                        break;
-                                    }
-                                case 26 :
-                                    {
-                                        textBox26.Text = textBox26.Text.Insert(0, us.ToString() + "\r\n");
-                                        history26 = textBox26.Text + "\r\n";
-                                        break;
-                                    }
-                                case 27 :
-                                    {
-                                        textBox27.Text = textBox27.Text.Insert(0, us.ToString() + "\r\n");
-                                        history27 = textBox27.Text + "\r\n";
-                                        break;
-                                    }
-                                case 28 :
-                                    {
-                                        textBox28.Text = textBox28.Text.Insert(0, us.ToString() + "\r\n");
-                                        history28 = textBox28.Text + "\r\n";
-                                        break;
-                                    }
-                                case 29 :
-                                    {
-                                        textBox29.Text = textBox29.Text.Insert(0, us.ToString() + "\r\n");
-                                        history29 = textBox29.Text + "\r\n";
-                                        break;
-                                    }
-                                case 30 :
-                                    {
-                                        textBox30.Text = textBox30.Text.Insert(0, us.ToString() + "\r\n");
-                                        history30 = textBox30.Text + "\r\n";
-                                        break;
-                                    }
+                                textBox1.Text = textBox1.Text.Insert(0, us.ToString() + "\r\n");
+                                history1 = textBox1.Text + "\r\n";
+                                break;
                             }
 
-                        }
-        }
+                        case 2:
+                            {
+                                textBox2.Text = textBox2.Text.Insert(0, us.ToString() + "\r\n");
+                                history2 = textBox2.Text + "\r\n";
+                                break;
+                            }
+                        case 3:
+                            {
+                                textBox3.Text = textBox3.Text.Insert(0, us.ToString() + "\r\n");
+                                history3 = textBox3.Text + "\r\n";
+                                break;
+                            }
+                        case 4 :
+                            {
+                                textBox4.Text = textBox4.Text.Insert(0, us.ToString() + "\r\n");
+                                history4 = textBox4.Text + "\r\n";
+                                break;
+                            }
+                        case 5 :
+                            {
+                                textBox5.Text = textBox5.Text.Insert(0, us.ToString() + "\r\n");
+                                history5 = textBox5.Text + "\r\n";
+                                break;
+                            }
+                        case 6 :
+                            {
+                                textBox6.Text = textBox6.Text.Insert(0, us.ToString() + "\r\n");
+                                history6 = textBox6.Text + "\r\n";
+                                break;
+                            }
+                        case 7 :
+                            {
+                                textBox7.Text = textBox7.Text.Insert(0, us.ToString() + "\r\n");
+                                history7 = textBox7.Text + "\r\n";
+                                break;
+                            }
+                        case 8 :
+                            {
+                                textBox8.Text = textBox8.Text.Insert(0, us.ToString() + "\r\n");
+                                history8 = textBox8.Text + "\r\n";
+                                break;
+                            }
+                        case 9 :
+                            {
+                                textBox9.Text = textBox9.Text.Insert(0, us.ToString() + "\r\n");
+                                history9 = textBox9.Text + "\r\n";
+                                break;
+                            }
+                        case 10 :
+                            {
+                                textBox10.Text = textBox10.Text.Insert(0, us.ToString() + "\r\n");
+                                history10 = textBox10.Text + "\r\n";
+                                break;
+                            }
+                        //11-20
+                        case 11 :
+                            {
+                                textBox11.Text = textBox11.Text.Insert(0, us.ToString() + "\r\n");
+                                history11 = textBox11.Text + "\r\n";
+                                break;
+                            }
+                        case 12 :
+                            {
+                                textBox12.Text = textBox12.Text.Insert(0, us.ToString() + "\r\n");
+                                history12 = textBox12.Text + "\r\n";
+                                break;
+                            }
+                        case 13 :
+                            {
+                                textBox13.Text = textBox13.Text.Insert(0, us.ToString() + "\r\n");
+                                history13 = textBox13.Text + "\r\n";
+                                break;
+                            }
+                        case  14:
+                            {
+                                textBox14.Text = textBox14.Text.Insert(0, us.ToString() + "\r\n");
+                                history14 = textBox14.Text + "\r\n";
+                                break;
+                            }
+                        case 15 :
+                            {
+                                textBox15.Text = textBox15.Text.Insert(0, us.ToString() + "\r\n");
+                                history15 = textBox15.Text + "\r\n";
+                                break;
+                            }
+                        case 16 :
+                            {
+                                textBox16.Text = textBox16.Text.Insert(0, us.ToString() + "\r\n");
+                                history16 = textBox16.Text + "\r\n";
+                                break;
+                            }
+                        case 17 :
+                            {
+                                textBox17.Text = textBox17.Text.Insert(0, us.ToString() + "\r\n");
+                                history17 = textBox17.Text + "\r\n";
+                                break;
+                            }
+                        case 18:
+                            {
+                                textBox18.Text = textBox18.Text.Insert(0, us.ToString() + "\r\n");
+                                history18 = textBox18.Text + "\r\n";
+                                break;
+                            }
+                        case 19 :
+                            {
+                                textBox19.Text = textBox19.Text.Insert(0, us.ToString() + "\r\n");
+                                history19 = textBox19.Text + "\r\n";
+                                break;
+                            }
+                        case 20 :
+                            {
+                                textBox20.Text = textBox20.Text.Insert(0, us.ToString() + "\r\n");
+                                history20 = textBox20.Text + "\r\n";
+                                break;
+                            }
+                        //20-30
+                        case 21 :
+                            {
+                                textBox21.Text = textBox21.Text.Insert(0, us.ToString() + "\r\n");
+                                history21 = textBox21.Text + "\r\n";
+                                break;
+                            }
+                        case 22:
+                            {
+                                textBox22.Text = textBox22.Text.Insert(0, us.ToString() + "\r\n");
+                                history22 = textBox22.Text + "\r\n";
+                                break;
+                            }
+                        case 23 :
+                            {
+                                textBox23.Text = textBox23.Text.Insert(0, us.ToString() + "\r\n");
+                                history23 = textBox23.Text + "\r\n";
+                                break;
+                            }
+                        case 24 :
+                            {
+                                textBox24.Text = textBox24.Text.Insert(0, us.ToString() + "\r\n");
+                                history24 = textBox24.Text + "\r\n";
+                                break;
+                            }
+                        case 25 :
+                            {
+                                textBox25.Text = textBox25.Text.Insert(0, us.ToString() + "\r\n");
+                                history25 = textBox25.Text + "\r\n";
+                                break;
+                            }
+                        case 26 :
+                            {
+                                textBox26.Text = textBox26.Text.Insert(0, us.ToString() + "\r\n");
+                                history26 = textBox26.Text + "\r\n";
+                                break;
+                            }
+                        case 27 :
+                            {
+                                textBox27.Text = textBox27.Text.Insert(0, us.ToString() + "\r\n");
+                                history27 = textBox27.Text + "\r\n";
+                                break;
+                            }
+                        case 28 :
+                            {
+                                textBox28.Text = textBox28.Text.Insert(0, us.ToString() + "\r\n");
+                                history28 = textBox28.Text + "\r\n";
+                                break;
+                            }
+                        case 29 :
+                            {
+                                textBox29.Text = textBox29.Text.Insert(0, us.ToString() + "\r\n");
+                                history29 = textBox29.Text + "\r\n";
+                                break;
+                            }
+                        case 30 :
+                            {
+                                textBox30.Text = textBox30.Text.Insert(0, us.ToString() + "\r\n");
+                                history30 = textBox30.Text + "\r\n";
+                                break;
+                            }
+                    }
 
+                 }
+        }
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -377,8 +321,7 @@ namespace RS232
 
         private void fclsRS232Tester_Load(object sender, EventArgs e)
         {
-            //this.MaximumSize = this.Size;
-            //this.MinimumSize = this.Size;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
