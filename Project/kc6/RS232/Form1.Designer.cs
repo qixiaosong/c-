@@ -29,6 +29,7 @@ namespace RS232
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fclsRS232Tester));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.stsStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.port = new System.IO.Ports.SerialPort(this.components);
@@ -136,7 +137,7 @@ namespace RS232
             // 
             this.cmbComSelect.FormattingEnabled = true;
             this.cmbComSelect.Location = new System.Drawing.Point(12, 28);
-            this.cmbComSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbComSelect.Margin = new System.Windows.Forms.Padding(4);
             this.cmbComSelect.Name = "cmbComSelect";
             this.cmbComSelect.Size = new System.Drawing.Size(100, 23);
             this.cmbComSelect.Sorted = true;
@@ -219,9 +220,9 @@ namespace RS232
             this.groupBox1.Controls.Add(this.textBox30);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(121, 6);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox1.Size = new System.Drawing.Size(1021, 785);
             this.groupBox1.TabIndex = 20;
@@ -301,7 +302,8 @@ namespace RS232
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(8, 338);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox13.MaxLength = 0;
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -441,7 +443,8 @@ namespace RS232
             // textBox20
             // 
             this.textBox20.Location = new System.Drawing.Point(175, 482);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox20.MaxLength = 0;
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
             this.textBox20.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -451,7 +454,8 @@ namespace RS232
             // textBox19
             // 
             this.textBox19.Location = new System.Drawing.Point(8, 482);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox19.MaxLength = 0;
             this.textBox19.Multiline = true;
             this.textBox19.Name = "textBox19";
             this.textBox19.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -461,7 +465,8 @@ namespace RS232
             // textBox18
             // 
             this.textBox18.Location = new System.Drawing.Point(855, 338);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox18.MaxLength = 0;
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
             this.textBox18.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -471,7 +476,8 @@ namespace RS232
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(685, 338);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox17.MaxLength = 0;
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -481,7 +487,8 @@ namespace RS232
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(515, 338);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox16.MaxLength = 0;
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
             this.textBox16.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -491,7 +498,8 @@ namespace RS232
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(345, 338);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox15.MaxLength = 0;
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -501,7 +509,8 @@ namespace RS232
             // textBox14
             // 
             this.textBox14.Location = new System.Drawing.Point(175, 338);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox14.MaxLength = 0;
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -511,7 +520,8 @@ namespace RS232
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(855, 198);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox12.MaxLength = 0;
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -521,7 +531,8 @@ namespace RS232
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(685, 198);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox11.MaxLength = 0;
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -531,7 +542,8 @@ namespace RS232
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(515, 198);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox10.MaxLength = 0;
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -542,7 +554,8 @@ namespace RS232
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(345, 198);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox9.MaxLength = 0;
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -552,7 +565,8 @@ namespace RS232
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(175, 198);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox8.MaxLength = 0;
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -562,7 +576,8 @@ namespace RS232
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(8, 198);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox7.MaxLength = 0;
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -573,7 +588,8 @@ namespace RS232
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(855, 56);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox6.MaxLength = 0;
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -583,7 +599,8 @@ namespace RS232
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(685, 56);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5.MaxLength = 0;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -594,7 +611,8 @@ namespace RS232
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(345, 55);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.MaxLength = 0;
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -604,7 +622,8 @@ namespace RS232
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(515, 55);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.MaxLength = 0;
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -614,7 +633,8 @@ namespace RS232
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(175, 56);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.MaxLength = 0;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -624,7 +644,8 @@ namespace RS232
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(8, 55);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.MaxLength = 0;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -686,7 +707,8 @@ namespace RS232
             // textBox21
             // 
             this.textBox21.Location = new System.Drawing.Point(345, 482);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox21.MaxLength = 0;
             this.textBox21.Multiline = true;
             this.textBox21.Name = "textBox21";
             this.textBox21.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -697,7 +719,8 @@ namespace RS232
             // textBox22
             // 
             this.textBox22.Location = new System.Drawing.Point(515, 482);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox22.MaxLength = 0;
             this.textBox22.Multiline = true;
             this.textBox22.Name = "textBox22";
             this.textBox22.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -707,7 +730,8 @@ namespace RS232
             // textBox23
             // 
             this.textBox23.Location = new System.Drawing.Point(685, 482);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox23.MaxLength = 0;
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -717,7 +741,8 @@ namespace RS232
             // textBox24
             // 
             this.textBox24.Location = new System.Drawing.Point(855, 482);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox24.MaxLength = 0;
             this.textBox24.Multiline = true;
             this.textBox24.Name = "textBox24";
             this.textBox24.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -727,7 +752,8 @@ namespace RS232
             // textBox25
             // 
             this.textBox25.Location = new System.Drawing.Point(8, 622);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox25.MaxLength = 0;
             this.textBox25.Multiline = true;
             this.textBox25.Name = "textBox25";
             this.textBox25.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -767,7 +793,8 @@ namespace RS232
             // textBox26
             // 
             this.textBox26.Location = new System.Drawing.Point(175, 622);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox26.MaxLength = 0;
             this.textBox26.Multiline = true;
             this.textBox26.Name = "textBox26";
             this.textBox26.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -777,7 +804,8 @@ namespace RS232
             // textBox27
             // 
             this.textBox27.Location = new System.Drawing.Point(345, 622);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox27.MaxLength = 0;
             this.textBox27.Multiline = true;
             this.textBox27.Name = "textBox27";
             this.textBox27.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -787,7 +815,8 @@ namespace RS232
             // textBox28
             // 
             this.textBox28.Location = new System.Drawing.Point(515, 622);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox28.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox28.MaxLength = 0;
             this.textBox28.Multiline = true;
             this.textBox28.Name = "textBox28";
             this.textBox28.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -808,7 +837,8 @@ namespace RS232
             // textBox29
             // 
             this.textBox29.Location = new System.Drawing.Point(685, 622);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox29.MaxLength = 0;
             this.textBox29.Multiline = true;
             this.textBox29.Name = "textBox29";
             this.textBox29.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -819,7 +849,7 @@ namespace RS232
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(380, 748);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 29);
             this.button3.TabIndex = 5;
@@ -830,7 +860,7 @@ namespace RS232
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(559, 748);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 29);
             this.button2.TabIndex = 4;
@@ -841,7 +871,8 @@ namespace RS232
             // textBox30
             // 
             this.textBox30.Location = new System.Drawing.Point(855, 622);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox30.MaxLength = 0;
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
             this.textBox30.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -889,7 +920,7 @@ namespace RS232
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 171);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 79;
@@ -900,7 +931,7 @@ namespace RS232
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(12, 208);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 29);
             this.button4.TabIndex = 79;
@@ -911,7 +942,7 @@ namespace RS232
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(12, 245);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 29);
             this.button5.TabIndex = 79;
@@ -946,7 +977,8 @@ namespace RS232
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbComSelect);
             this.Controls.Add(this.statusStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(261, 218);
             this.Name = "fclsRS232Tester";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_24CB5ACEA0314759B65BEE90F2A088D3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2DB90C29ECA6497EB4FF5A17F8119BB4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -28,6 +22,12 @@
         "Entry"
         {
         "MsmKey" = "8:_73DEC961D3A04F9B866F4CF514928636"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AE1C55C93FA040D0B7094FAD462B0BB6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -62,6 +62,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -86,6 +94,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -116,12 +132,12 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24CB5ACEA0314759B65BEE90F2A088D3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2DB90C29ECA6497EB4FF5A17F8119BB4"
             {
-            "SourcePath" = "8:D:\\Pictures\\其他\\kc.ico"
-            "TargetName" = "8:kc.ico"
+            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
+            "TargetName" = "8:msiexec.exe"
             "Tag" = "8:"
-            "Folder" = "8:_9C560944DF6C4F3A99CE5DE656916C42"
+            "Folder" = "8:_EF8D1FC6F5BC4A7C9A7F2611C202C88F"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -136,12 +152,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2DB90C29ECA6497EB4FF5A17F8119BB4"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AE1C55C93FA040D0B7094FAD462B0BB6"
             {
-            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
-            "TargetName" = "8:msiexec.exe"
+            "SourcePath" = "8:D:\\Pictures\\others\\kc.ico"
+            "TargetName" = "8:kc.ico"
             "Tag" = "8:"
-            "Folder" = "8:_EF8D1FC6F5BC4A7C9A7F2611C202C88F"
+            "Folder" = "8:_9C560944DF6C4F3A99CE5DE656916C42"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -355,7 +371,7 @@
             "Target" = "8:_2DB90C29ECA6497EB4FF5A17F8119BB4"
             "Folder" = "8:_1D0E63B8B2AB48CC83EAD741CED16294"
             "WorkingFolder" = "8:_EF8D1FC6F5BC4A7C9A7F2611C202C88F"
-            "Icon" = "8:_24CB5ACEA0314759B65BEE90F2A088D3"
+            "Icon" = "8:_AE1C55C93FA040D0B7094FAD462B0BB6"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_46556BDC09A341998300367FF9CBAB72"
@@ -369,7 +385,7 @@
             "Target" = "8:_73DEC961D3A04F9B866F4CF514928636"
             "Folder" = "8:_1D0E63B8B2AB48CC83EAD741CED16294"
             "WorkingFolder" = "8:_EF8D1FC6F5BC4A7C9A7F2611C202C88F"
-            "Icon" = "8:_24CB5ACEA0314759B65BEE90F2A088D3"
+            "Icon" = "8:_AE1C55C93FA040D0B7094FAD462B0BB6"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7F98A834E8394B699541166BDB0F2048"
@@ -383,7 +399,7 @@
             "Target" = "8:_73DEC961D3A04F9B866F4CF514928636"
             "Folder" = "8:_8513314BB403471DB54831C8E70E49A3"
             "WorkingFolder" = "8:_EF8D1FC6F5BC4A7C9A7F2611C202C88F"
-            "Icon" = "8:_24CB5ACEA0314759B65BEE90F2A088D3"
+            "Icon" = "8:_AE1C55C93FA040D0B7094FAD462B0BB6"
             "Feature" = "8:"
             }
         }
@@ -787,7 +803,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_73DEC961D3A04F9B866F4CF514928636"
             {
-            "SourcePath" = "8:..\\RS232\\obj\\Debug\\RS232.exe"
+            "SourcePath" = "8:..\\RS232\\obj\\Release\\RS232.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_EF8D1FC6F5BC4A7C9A7F2611C202C88F"
